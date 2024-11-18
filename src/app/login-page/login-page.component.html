@@ -1,0 +1,16 @@
+<h1>Login Page</h1>
+
+<form [formGroup]="form" (ngSubmit)="getData()">
+    <div>
+        <input type="number" formControlName="id" placeholder="ID">
+    </div>
+    <div>
+        <input type="text" formControlName="name" placeholder="name">
+    </div>
+    <div>
+        <input type="number" formControlName="year" placeholder="Year">
+    </div>
+    <div>
+        <button type="submit">Login</button>
+    </div>
+</form>
