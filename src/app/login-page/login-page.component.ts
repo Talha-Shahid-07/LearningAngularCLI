@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { GetDataService } from '../services/getData.service';
+import { loginUserService } from '../services/loginUser.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class LoginPageComponent implements OnInit {
   constructor(
     private http: HttpClient,
-    private getDataService: GetDataService,
+    private getDataService: loginUserService,
     private router: Router
   ) {}
 

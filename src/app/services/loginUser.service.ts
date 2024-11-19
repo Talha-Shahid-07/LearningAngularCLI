@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class GetDataService {
+export class loginUserService {
   private apiUrl = 'https://reqres.in/api/products/'; // Replace with your API URL
 
   constructor(private http: HttpClient) {}
