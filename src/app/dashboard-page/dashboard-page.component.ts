@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -9,4 +11,9 @@ import { Component } from '@angular/core';
 })
 export class DashboardPageComponent {
 
+  constructor(private router:Router){}
+  logout(){
+    localStorage.clear();
+    this.router.navigateByUrl('homePage');
+  }
 }

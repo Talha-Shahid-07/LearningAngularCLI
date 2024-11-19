@@ -39,9 +39,11 @@ export class LoginPageComponent implements OnInit {
 
   verifyLogin(id: any, name: string, year: string) {
     this.getDataService.getData(id).subscribe((data) => {
-      console.log(data?.data?.[id]?.name);
+      debugger
+      console.log(data?.data?.name);
       if (data?.data?.name == name && data?.data?.year == year) {
         console.log('Login Successful');
+        localStorage.setItem('user', JSON.stringify(data))
         this.router.navigate(['dashboard']);
       } else {
         alert('Invalid Credentials');
